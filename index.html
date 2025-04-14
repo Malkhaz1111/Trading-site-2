@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ტრეიდინგ ანალიზი</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ტრეიდინგ ანალიზი</div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">მთავარი</a>
+            <a href="#" class="nav-link">ანალიზი</a>
+            <a href="#" class="nav-link">სტრატეგიები</a>
+            <a href="#" class="nav-link">განათლება</a>
+            <a href="#" class="nav-link">კონტაქტი</a>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <div class="chart-section">
+            <div class="chart-header">
+                <div class="symbol-selector">
+                    <select id="market-select">
+                        <option>Forex</option>
+                        <option>Crypto</option>
+                        <option>Stocks</option>
+                        <option>Commodities</option>
+                    </select>
+                    <select id="symbol-select">
+                        <!-- App.js-ში ლოდინით ჩატვირთება -->
+                    </select>
+                </div>
+                <div class="timeframe-selector">
+                    <button class="timeframe-btn">1m</button>
+                    <button class="timeframe-btn">5m</button>
+                    <button class="timeframe-btn">15m</button>
+                    <button class="timeframe-btn">1h</button>
+                    <button class="timeframe-btn">4h</button>
+                    <button class="timeframe-btn">1d</button>
+                </div>
+            </div>
+            <div class="chart-inner" id="chart-container">
+                <!-- TradingView ჩარტი აქ ჩასაჯდება -->
+            </div>
+        </div>
+        
+        <div class="analysis-panel">
+            <div class="tab-container">
+                <div class="tab active" data-tab="indicators">ინდიკატორები</div>
+                <div class="tab" data-tab="strategies">სტრატეგიები</div>
+                <div class="tab" data-tab="news">სიახლეები</div>
+            </div>
+            
+            <div class="tab-content active" id="indicators">
+                <div class="panel-section">
+                    <div class="panel-title">ტექნიკური ინდიკატორები</div>
+                    <div class="indicator">
+                        <span>RSI (14)</span>
+                        <span class="indicator-value buy">62.5 - ყიდვა</span>
+                    </div>
+                    <div class="indicator">
+                        <span>MACD</span>
+                        <span class="indicator-value sell">-0.0024 - გაყიდვა</span>
+                    </div>
+                    <div class="indicator">
+                        <span>Moving Average (50)</span>
+                        <span class="indicator-value buy">1.0892 - ყიდვა</span>
+                    </div>
+                    <div class="indicator">
+                        <span>Bollinger Bands</span>
+                        <span class="indicator-value neutral">ნეიტრალური</span>
+                    </div>
+                    <div class="indicator">
+                        <span>Stochastic</span>
+                        <span class="indicator-value buy">80.2 - ყიდვა</span>
+                    </div>
+                </div>
+                
+                <div class="panel-section">
+                    <div class="panel-title">მოკლევადიანი პროგნოზი</div>
+                    <div class="indicator">
+                        <span>5 წუთი</span>
+                        <span class="indicator-value buy">ყიდვა</span>
+                    </div>
+                    <div class="indicator">
+                        <span>15 წუთი</span>
+                        <span class="indicator-value neutral">ნეიტრალური</span>
+                    </div>
+                    <div class="indicator">
+                        <span>1 საათი</span>
+                        <span class="indicator-value buy">ყიდვა</span>
+                    </div>
+                </div>
+                
+                <div class="panel-section">
+                    <div class="panel-title">მხარდაჭერა და წინააღმდეგობა</div>
+                    <div class="indicator">
+                        <span>მხარდაჭერა 1</span>
+                        <span class="indicator-value">1.0875</span>
+                    </div>
+                    <div class="indicator">
+                        <span>მხარდაჭერა 2</span>
+                        <span class="indicator-value">1.0850</span>
+                    </div>
+                    <div class="indicator">
+                        <span>წინააღმდეგობა 1</span>
+                        <span class="indicator-value">1.0910</span>
+                    </div>
+                    <div class="indicator">
+                        <span>წინააღმდეგობა 2</span>
+                        <span class="indicator-value">1.0935</span>
+                    </div>
+                </div>
+
+                <!-- ანალიზის დამატებითი ბლოკები აქ დაემატება JS-ით -->
+                <div class="analysis-section"></div>
+            </div>
+            
+            <div class="tab-content" id="strategies">
+                <!-- სტრატეგიების სექცია უკვე მზადაა -->
+            </div>
+
+            <div class="tab-content" id="news">
+                <!-- სიახლეების სექციაც მზადაა -->
+            </div>
+        </div>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+</html>
